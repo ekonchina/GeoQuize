@@ -23,23 +23,24 @@ public class GeoQuize extends AppCompatActivity {
         mTrueButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast text = Toast.makeText(GeoQuize.this,
-                        R.string.correct_toast,
-                        Toast.LENGTH_SHORT);
-                text.setGravity(Gravity.TOP,0,150);
-                text.show();
+
+                toast(R.string.correct_toast);
             }
         });
 
         mFalseButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast text = Toast.makeText(GeoQuize.this,
-                        R.string.incorrect_toast,
-                        Toast.LENGTH_SHORT);
-                text.setGravity(Gravity.TOP,0,150);
-                text.show();
+                toast(R.string.incorrect_toast);
             }
         });
+    }
+
+    private void toast(int message){
+        Toast text = Toast.makeText(GeoQuize.this,
+                R.string.correct_toast,
+                Toast.LENGTH_SHORT);
+        text.show();
+
     }
 }
